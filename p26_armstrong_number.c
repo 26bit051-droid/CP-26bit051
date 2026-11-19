@@ -1,20 +1,14 @@
 #include <stdio.h>
-
-int main()
-{
-    int n, temp, rem, sum = 0;
-    printf("Enter a number: ");
+int main() {
+    int n, t, d, sum = 0;
     scanf("%d", &n);
-    temp = n;
-    while (temp > 0)
-    {
-        rem = temp % 10;
-        sum = sum + rem * rem * rem;
-        temp = temp / 10;
+    t = n;
+    while (t > 0) {
+        d = t % 10;
+        sum = sum + d * d * d;
+        t = t / 10;
     }
-    if (sum == n)
-        printf("%d is an Armstrong number\n", n);
-    else
-        printf("%d is not an Armstrong number\n", n);
+    if (sum == n) printf("Armstrong");
+    else printf("Not Armstrong");
     return 0;
 }
