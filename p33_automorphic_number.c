@@ -1,27 +1,15 @@
 #include <stdio.h>
-
-int main()
-{
-    long int n, sq, temp, t2;
-    int flag = 1;
-    printf("Enter a number: ");
-    scanf("%ld", &n);
+int main() {
+    int n, t, sq, flag = 1;
+    scanf("%d", &n);
     sq = n * n;
-    temp = n;
-    t2 = sq;
-    while (temp > 0)
-    {
-        if (temp % 10 != t2 % 10)
-        {
-            flag = 0;
-            break;
-        }
-        temp = temp / 10;
-        t2 = t2 / 10;
+    t = n;
+    while (t > 0) {
+        if (t % 10 != sq % 10) flag = 0;
+        t = t / 10;
+        sq = sq / 10;
     }
-    if (flag == 1)
-        printf("%ld is an automorphic number\n", n);
-    else
-        printf("%ld is not an automorphic number\n", n);
+    if (flag == 1) printf("Automorphic");
+    else printf("Not automorphic");
     return 0;
 }
