@@ -2,17 +2,12 @@
 
 int main()
 {
-    int n, d = 1;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    while (n / d >= 10)
-        d = d * 10;
-    while (d > 0)
-    {
-        printf("%d ", n / d);
-        n = n % d;
-        d = d / 10;
-    }
-    printf("\n");
-    return 0;
+    int n, digit;
+printf("Enter a number=");
+scanf("%d", &n);
+while (n>0)
+{   
+    digit=n%10;
+    printf("%d\n", digit);
+}
 }
