@@ -1,12 +1,11 @@
 #include <stdio.h>
 int main() {
-    int n, i, c, count = 0;
+    int n, i, c;
     for (n = 2; n <= 500; n++) {
         c = 0;
         for (i = 1; i <= n; i++)
             if (n % i == 0) c++;
-        if (c == 2) count++;
+        if (c == 2) printf("%d ", n);
     }
-    printf("%d", count);
     return 0;
 }
